@@ -7,6 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+        colors:{
+      "pri-white":"#FFFFFF",
+      "pri-purple":"#C778DD",
+      "pri-gray":"#ABB2BF",
+      "pri-purple-dark":"#251C31",
+      "pri-black":"#121212"
+ 
+    },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -14,5 +22,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
