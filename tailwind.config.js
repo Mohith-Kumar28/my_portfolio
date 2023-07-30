@@ -12,7 +12,8 @@ module.exports = {
       "pri-purple":"#C778DD",
       "pri-gray":"#ABB2BF",
       "pri-purple-dark":"#251C31",
-      "pri-black":"#121212"
+      "pri-black":"#121212",
+      "sec-black":"#222222"
  
     },
       backgroundImage: {

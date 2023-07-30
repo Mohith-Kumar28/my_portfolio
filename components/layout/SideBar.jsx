@@ -30,7 +30,7 @@ export default function SideBar() {
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Disclosure as="div" className=" w-1/3 "  onClose={setOpen}>
+      <Disclosure as="div" className=" w-80"  onClose={setOpen}>
       
 
             <div className="pointer-events-none h-screen   flex ">
