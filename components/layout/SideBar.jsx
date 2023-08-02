@@ -1,16 +1,19 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { Disclosure, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon,DocumentTextIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function SideBar() {
   const [open, setOpen] = useState(true)
+
+  const router=useRouter()
 
   const menuItems=[
     {
         name:'Home',
         href:'/',
-        isActive:true
+        isActive:false
     },
     {
         name:'Works',
@@ -19,7 +22,7 @@ export default function SideBar() {
     },
     {
         name:'Contacts',
-        href:'#',
+        href:'/about#contact',
         isActive:false
     },
     {
@@ -28,6 +31,22 @@ export default function SideBar() {
         isActive:false
     },
   ]
+  const [menu, setMenu] = useState(menuItems)
+
+  useEffect(() => {
+    const newMenu=   menu.map((m)=>{
+    // console.log(router.)
+     
+      if(router.pathname==m.href){
+        m.isActive=true
+     return m
+      }
+      return m
+    }
+    )
+  setMenu(newMenu)
+    
+  }, [router])
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -54,13 +73,15 @@ export default function SideBar() {
                     </div>
                     <div className=" text-xl mt-6 flex flex-col gap-y-6 px-4 sm:px-6">
                         
-                        {menuItems.map((i)=>(
+                        {menu.map((i)=>(
                           <Link key={i.name} href={i.href}>
                             <div  className={` text-pri-gray cursor-pointer hover:text-white ${i.isActive?'text-white font-bold':''}`}><span className='text-pri-purple'># </span>{i.name}</div>
                             </Link>   ))}
                     </div>
                     </div>
-                  <button className='border-pri-purple border-2 mx-3 mt-5 py-2 hover:bg-white hover:text-pri-purple font-bold'>RESUME</button>
+                    <Link target='_blank' href={'/assets/resume.pdf'} className='w-full '>                  <div className='border-pri-purple text-center  border-2 mx-3 mt-5 py-2 hover:bg-white hover:text-pri-purple font-bold flex justify-center gap-2'><DocumentTextIcon className='w-4'/> RESUME</div>
+                    </Link>
+
                   </div>
                 </Disclosure.Panel>
               </Transition.Child>
