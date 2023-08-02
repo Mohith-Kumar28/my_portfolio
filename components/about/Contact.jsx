@@ -12,7 +12,7 @@ const Contact = () => {
 <div className='flex flex-col-reverse md:flex md:flex-row'>
 <div className=''>
 <p className='text-pri-gray pb-8 md:pr-20'>
-Feel free to reach out to me for job opportunities, freelance projects, or any other inquiries you may have. I'm excited to hear from you and explore potential collaborations. Let's connect and create something amazing together! </p>
+Feel free to reach out to me for job opportunities, freelance projects, or any other inquiries you may have. I am excited to hear from you and explore potential collaborations. Let us connect and create something amazing together! </p>
 
 </div>
 <div className=' '>
