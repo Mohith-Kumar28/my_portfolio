@@ -19,16 +19,16 @@ const ChatHome = () => {
 
 
   // Load message count and last message time from local storage on component mount
-  // useEffect(() => {
-  //   const storedMessageCount = localStorage.getItem('messageCount');
-  //   const storedLastMessageTime = localStorage.getItem('lastMessageTime');
-  //   if (storedMessageCount) {
-  //     setMessageCount(parseInt(storedMessageCount));
-  //   }
-  //   if (storedLastMessageTime) {
-  //     setLastMessageTime(parseInt(storedLastMessageTime));
-  //   }
-  // }, []);
+  useEffect(() => {
+    const storedMessageCount = localStorage.getItem('messageCount');
+    const storedLastMessageTime = localStorage.getItem('lastMessageTime');
+    if (storedMessageCount) {
+      setMessageCount(parseInt(storedMessageCount));
+    }
+    if (storedLastMessageTime) {
+      setLastMessageTime(parseInt(storedLastMessageTime));
+    }
+  }, []);
 
   // Save message count and last message time to local storage on component update
   // useEffect(() => {
@@ -47,29 +47,29 @@ const ChatHome = () => {
     e.preventDefault();
 
     // recaptch verification
-    // const recaptchaResponse = await recaptchaRef.current.executeAsync();
-    // if (!recaptchaResponse) {
-    //   alert('Please verify that you are not a robot.');
-    //   return;
-    // }
+    const recaptchaResponse = await recaptchaRef.current.executeAsync();
+    if (!recaptchaResponse) {
+      alert('Please verify that you are not a robot.');
+      return;
+    }
 
 if(userInput!==''){
 
 // Check if the maximum number of messages per minute (20) is reached
 const currentTime = Date.now();
-// if( currentTime - lastMessageTime >= 60000){
-//   setMessageCount(0);
-//   localStorage.setItem('messageCount',  0);
-//   setLastMessageTime(currentTime);
-//   localStorage.setItem('lastMessageTime', currentTime);
-// }
-// // console.log(currentTime - lastMessageTime)
-// if (messageCount >= 20 && currentTime - lastMessageTime <= 60000) {
+if( currentTime - lastMessageTime >= 60000){
+  setMessageCount(0);
+  localStorage.setItem('messageCount',  0);
+  setLastMessageTime(currentTime);
+  localStorage.setItem('lastMessageTime', currentTime);
+}
+// console.log(currentTime - lastMessageTime)
+if (messageCount >= 20 && currentTime - lastMessageTime <= 60000) {
   
 
-//   alert('You have reached the maximum number of messages per minute. wait for one minute to send more questions');
-//   return;
-// }
+  alert('You have reached the maximum number of messages per minute. wait for one minute to send more questions');
+  return;
+}
 
 
   setUserInput('');
@@ -109,15 +109,15 @@ setLoading(false)
 
 
     // Update the message count and last message time
-    // setMessageCount((prevCount) => prevCount + 1);
+    setMessageCount((prevCount) => prevCount + 1);
     
 
-    // localStorage.setItem('messageCount',  messageCount + 1);
+    localStorage.setItem('messageCount',  messageCount + 1);
 
-  } 
+  }
   };
 
- 
+
   const sampleQuestion=[
     'Can you tell me about yourself?',
     'Can you walk me through your problem-solving process?',
