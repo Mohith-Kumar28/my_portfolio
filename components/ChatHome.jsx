@@ -114,10 +114,10 @@ setLoading(false)
 
     // localStorage.setItem('messageCount',  messageCount + 1);
 
-  }
+  } 
   };
 
-
+ 
   const sampleQuestion=[
     'Can you tell me about yourself?',
     'Can you walk me through your problem-solving process?',
