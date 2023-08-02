@@ -1,12 +1,12 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Disclosure, Transition } from '@headlessui/react'
-import { XMarkIcon,DocumentTextIcon } from '@heroicons/react/24/solid'
+import { XMarkIcon,DocumentTextIcon,ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 export default function SideBar() {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   const router=useRouter()
 
@@ -50,12 +50,12 @@ export default function SideBar() {
   }, [router])
 
   return (
-    <Transition.Root show={open} as={Fragment}>
-      <Disclosure as="div"   onClose={setOpen}>
+    // <Transition.Root show={open} as={Fragment}>
+      <div >
       
 
             <div className="pointer-events-none h-screen   flex ">
-              <Transition.Child
+              {/* <Transition.Child
                 as={Fragment}
                 enter="transform transition ease-in-out duration-500 sm:duration-700"
                 enterFrom="translate-y-full"
@@ -63,8 +63,8 @@ export default function SideBar() {
                 leave="transform transition ease-in-out duration-500 sm:duration-700"
                 leaveFrom="translate-y-0"
                 leaveTo="translate-y-full"
-              >
-                <Disclosure.Panel className="pointer-events-auto relative  w-48">
+              > */}
+                <div className={`pointer-events-auto   h-full   ${open?'w-48 absolute z-50':'w-16 '} md:relative md:w-48 `}>
                   
                   
                   <div className="flex  h-full flex-col  bg-pri-purple-dark py-6 pt-0 px-4 shadow-xl ">
@@ -83,7 +83,7 @@ export default function SideBar() {
     </Link>
                   </div>
                     </div>
-                    <div className=" text-xl mt-6 flex flex-col gap-y-6 px-4 sm:px-6">
+                   <div className={`${open?'':'hidden'} md:flex text-xl mt-6 flex flex-col gap-y-6 px-4 sm:px-6`}>
                         
                         {menu.map((i)=>(
                           <Link key={i.name} href={i.href}>
@@ -91,15 +91,21 @@ export default function SideBar() {
                             </Link>   ))}
                     </div>
                     </div>
-                    <Link target='_blank' href={'/assets/resume.pdf'} className='w-full '>                  <div className='border-pri-purple text-center  border-2 mx-3 mt-5 py-2 hover:bg-white hover:text-pri-purple font-bold flex justify-center gap-2  shadow-lg shadow-pri-purple/30' ><DocumentTextIcon className='w-4'/> RESUME</div>
+                   <Link target='_blank' href={'/assets/resume.pdf'} className={`${open?'w-full':'hidden'} md:block md:w-full `}>                  <div className='border-pri-purple text-center  border-2 mx-3 mt-5 py-2 hover:bg-white hover:text-pri-purple font-bold flex justify-center gap-2  shadow-lg shadow-pri-purple/30' ><DocumentTextIcon className='w-4'/> RESUME</div>
                     </Link>
 
+<div onClick={()=>setOpen(!open)} className='md:hidden justify-center mt-6 flex cursor-pointer'>
+  {open?(
+     <ArrowLeftIcon className='w-12 rounded-full bg-white text-pri-black p-1'/>
+  ):(
+  <ArrowRightIcon className='w-12 rounded-full bg-white text-pri-black p-1'/>)}
+</div>
                   </div>
-                </Disclosure.Panel>
-              </Transition.Child>
+                </div>
+              {/* </Transition.Child> */}
             </div>
         
-      </Disclosure>
-    </Transition.Root>
+      </div>
+    // </Transition.Root>
   )
 }

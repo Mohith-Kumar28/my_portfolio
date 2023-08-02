@@ -11,7 +11,9 @@ export default function Home() {
   return (
  
     <Structure>
+      <div className='overflow-y-auto h-screen'> 
     <ChatHome/>
+    </div>
     </Structure>
 
   )
