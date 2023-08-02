@@ -29,7 +29,7 @@ const MiniProjectCard = ({project}) => {
     <LinkIcon className='w-4 ml-2 mt-1'/>
 </button>
 </Link>
-}
+} 
 
 {project.github_link&&
     <Link target='_blank' className='hover:outline rounded-full w-8 my-auto ml-auto' href={project.github_link}>
