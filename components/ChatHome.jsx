@@ -19,16 +19,16 @@ const ChatHome = () => {
 
 
   // Load message count and last message time from local storage on component mount
-  useEffect(() => {
-    const storedMessageCount = localStorage.getItem('messageCount');
-    const storedLastMessageTime = localStorage.getItem('lastMessageTime');
-    if (storedMessageCount) {
-      setMessageCount(parseInt(storedMessageCount));
-    }
-    if (storedLastMessageTime) {
-      setLastMessageTime(parseInt(storedLastMessageTime));
-    }
-  }, []);
+  // useEffect(() => {
+  //   const storedMessageCount = localStorage.getItem('messageCount');
+  //   const storedLastMessageTime = localStorage.getItem('lastMessageTime');
+  //   if (storedMessageCount) {
+  //     setMessageCount(parseInt(storedMessageCount));
+  //   }
+  //   if (storedLastMessageTime) {
+  //     setLastMessageTime(parseInt(storedLastMessageTime));
+  //   }
+  // }, []);
 
   // Save message count and last message time to local storage on component update
   // useEffect(() => {
@@ -47,11 +47,11 @@ const ChatHome = () => {
     e.preventDefault();
 
     // recaptch verification
-    const recaptchaResponse = await recaptchaRef.current.executeAsync();
-    if (!recaptchaResponse) {
-      alert('Please verify that you are not a robot.');
-      return;
-    }
+    // const recaptchaResponse = await recaptchaRef.current.executeAsync();
+    // if (!recaptchaResponse) {
+    //   alert('Please verify that you are not a robot.');
+    //   return;
+    // }
 
 if(userInput!==''){
 
@@ -109,10 +109,10 @@ setLoading(false)
 
 
     // Update the message count and last message time
-    setMessageCount((prevCount) => prevCount + 1);
+    // setMessageCount((prevCount) => prevCount + 1);
     
 
-    localStorage.setItem('messageCount',  messageCount + 1);
+    // localStorage.setItem('messageCount',  messageCount + 1);
 
   }
   };
