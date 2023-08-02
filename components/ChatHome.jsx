@@ -57,19 +57,19 @@ if(userInput!==''){
 
 // Check if the maximum number of messages per minute (20) is reached
 const currentTime = Date.now();
-if( currentTime - lastMessageTime >= 60000){
-  setMessageCount(0);
-  localStorage.setItem('messageCount',  0);
-  setLastMessageTime(currentTime);
-  localStorage.setItem('lastMessageTime', currentTime);
-}
-// console.log(currentTime - lastMessageTime)
-if (messageCount >= 20 && currentTime - lastMessageTime <= 60000) {
+// if( currentTime - lastMessageTime >= 60000){
+//   setMessageCount(0);
+//   localStorage.setItem('messageCount',  0);
+//   setLastMessageTime(currentTime);
+//   localStorage.setItem('lastMessageTime', currentTime);
+// }
+// // console.log(currentTime - lastMessageTime)
+// if (messageCount >= 20 && currentTime - lastMessageTime <= 60000) {
   
 
-  alert('You have reached the maximum number of messages per minute. wait for one minute to send more questions');
-  return;
-}
+//   alert('You have reached the maximum number of messages per minute. wait for one minute to send more questions');
+//   return;
+// }
 
 
   setUserInput('');
