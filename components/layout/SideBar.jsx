@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react'
 import { Disclosure, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 export default function SideBar() {
   const [open, setOpen] = useState(true)
@@ -8,8 +9,13 @@ export default function SideBar() {
   const menuItems=[
     {
         name:'Home',
-        href:'#',
+        href:'/',
         isActive:true
+    },
+    {
+        name:'Works',
+        href:'/works',
+        isActive:false
     },
     {
         name:'Contacts',
@@ -17,20 +23,15 @@ export default function SideBar() {
         isActive:false
     },
     {
-        name:'Portfolio',
-        href:'#',
-        isActive:false
-    },
-    {
         name:'About-me',
-        href:'#',
+        href:'/about',
         isActive:false
     },
   ]
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Disclosure as="div" className=" w-80"  onClose={setOpen}>
+      <Disclosure as="div"   onClose={setOpen}>
       
 
             <div className="pointer-events-none h-screen   flex ">
@@ -43,7 +44,7 @@ export default function SideBar() {
                 leaveFrom="translate-y-0"
                 leaveTo="translate-y-full"
               >
-                <Disclosure.Panel className="pointer-events-auto relative  w-full">
+                <Disclosure.Panel className="pointer-events-auto relative  w-48">
                   
                   
                   <div className="flex  h-full flex-col  bg-pri-purple-dark py-6 px-4 shadow-xl ">
@@ -54,8 +55,9 @@ export default function SideBar() {
                     <div className=" text-xl mt-6 flex flex-col gap-y-6 px-4 sm:px-6">
                         
                         {menuItems.map((i)=>(
-                            <div key={i.name} className={`text-pri-gray cursor-pointer hover:text-white ${i.isActive?'text-white font-bold':''}`}><span className='text-pri-purple'># </span>{i.name}</div>
-                        ))}
+                          <Link key={i.name} href={i.href}>
+                            <div  className={` text-pri-gray cursor-pointer hover:text-white ${i.isActive?'text-white font-bold':''}`}><span className='text-pri-purple'># </span>{i.name}</div>
+                            </Link>   ))}
                     </div>
                     </div>
                   <button className='border-pri-purple border-2 mx-3 mt-5 py-2 hover:bg-white hover:text-pri-purple font-bold'>RESUME</button>

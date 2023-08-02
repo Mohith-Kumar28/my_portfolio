@@ -61,8 +61,9 @@ setLoading(false)
 
 
   return (
-    <div className={`bg-pri-black relative  flex flex-col w-full  h-screen  ${chatHistory[0]?'justify-end ':'justify-center  p-6 align-middle'} `}
+    <div className={`bg-pri-black relative  flex flex-col w-full h-screen  ${chatHistory[0]?'justify-end ':'justify-center  p-6 align-middle'} `}
     >
+<div className=' mx-auto'>
       {chatHistory.length==0&&(<>
 <h1 className='font-bold text-3xl'>
 Hi i am<span className='text-pri-purple'> Mohith</span>, Chat  with<br/> my trained <span className='text-pri-purple'>AI assistant </span>
@@ -100,6 +101,7 @@ These questions just for reference, so feel free to ask any custom question!
 <PaperAirplaneIcon className='w-6 ' />
 </button>
 </form>
+</div>
 </div>
 </div>
     </div>
