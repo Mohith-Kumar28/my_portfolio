@@ -16,7 +16,7 @@ const ChatList = ({chatHistory}) => {
           }
           }, [chatHistory]);
   return (
-    <div>
+    <div className=''>
         <div className="space-y-2 pb-32 pt-12  overflow-y-auto h-screen ">
         {chatHistory.map((chat, index) => (
           <div

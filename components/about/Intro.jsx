@@ -11,11 +11,8 @@ const Intro = () => {
 <div className='flex flex-col-reverse md:flex md:flex-row'>
     <div className='md:w-2/3'>
     <p className='text-pri-gray py-8 md:pr-16'>
-    Hello, i’m Elias!
-
-I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. 
-
-Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.
+    Hello, I'm Mohith!
+     A passionate and self-taught front-end developer located in Hyderabad, India. With a strong flair for creativity and web development, I excel at crafting responsive and user-friendly websites from scratch.<br/><br/> Over the past year, I have been dedicated to transforming my knowledge into captivating web experiences, assisting numerous clients in establishing their online presence. Always eager to stay up-to-date with the latest technologies and frameworks, I am committed to delivering innovative solutions for the digital world.
     </p></div>
 <div className=' w-full md:w-1/3'>
     <Image alt='profilepic' width={700} height={700} src={'/assets/about/aboutMePic.png'}/>

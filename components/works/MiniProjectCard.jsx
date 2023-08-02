@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const MiniProjectCard = ({project}) => {
   return (
-    <div className='w-full md:w-[47%] h-fit border border-pri-gray bg-gray-900'>
+    <div className='w-full md:w-[47%] h-fit border border-pri-gray bg-sec-black'>
 {/* <Image width={300} height={300} src={project.img}/> */}
 <div className='border-y flex flex-wrap px-3 py-1 border-pri-gray gap-x-3'>
     {project.skills.map((p)=>{

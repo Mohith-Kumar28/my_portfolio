@@ -3,21 +3,21 @@ import React from 'react'
 
 const FunFacts = () => {
     const facts=[
-        'this is fact 1 here.',
-        'this is re.',
-        'this is fact 1 here.',
-        'this 1 here.',
-        'this is fact 1 here.',
-        'this is fact 1 here.',
-        'this is fact 1 here.',
-        'this is fact 1 here.',
-        'this is fact 1 here.',
-        'this is fact 1 here.',
+        'I like Trakpad than Mouse',
+        'I am an Introvert',
+        'I like watching youtube with 2x speed',
+        'I can speak three languages fluently: English, Hindi, and Telugu',
+        'My favourite super hero is Iron Man',
+        'I dont have any siblings',
+        'I prefer to work at night',
+        'I am a die-hard fan of sci-fi movies',
+        'I learn everything from youtube',
+        'I prefer project based learning',
     ]
   return (
     <div className='p-6 '>
         <h2 className='font-bold text-2xl mb-8'>
-<span className='text-pri-purple'> /</span>Fun Facts
+<span className='text-pri-purple'> /</span>Fun-Facts about me
 </h2>
 
 <div className='flex flex-col-reverse md:flex md:flex-row'>
