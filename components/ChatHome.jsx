@@ -64,7 +64,7 @@ if( currentTime - lastMessageTime >= 60000){
   localStorage.setItem('lastMessageTime', currentTime);
 }
 // console.log(currentTime - lastMessageTime)
-if (messageCount >= 20 && currentTime - lastMessageTime <= 60000) {
+if (messageCount >= 10 && currentTime - lastMessageTime <= 60000) {
   
 
   alert('You have reached the maximum number of messages per minute. wait for one minute to send more questions');
