@@ -18,9 +18,9 @@ Feel free to reach out to me for job opportunities, freelance projects, or any o
 <div className=' '>
 {/* <Image className='' alt='profilepic' width={1000} height={1000} src={'/assets/about/funFactsPic.png'}/> */}
 <Link href={'mailto:mohithkumar808@gmail.com'}>
-<div className='group font-bold text-center border-2  border-pri-purple shadow-2xl shadow-pri-purple/50 hover:border-pri-purple hover:bg-transparent bg-pri-purple text-xl  hover:text-pri-white p-4'>
+<div className='group font-bold text-center border-2  border-pri-purple shadow-2xl shadow-pri-purple/50 hover:border-pri-purple hover:bg-transparent bg-pri-purple text-xl  hover:text-pri-white p-4 mb-6'>
     MAIL ME
-    <div className='group-hover:text-pri-gray text-base text-pri-black flex gap-2 justify-center'><EnvelopeIcon className='w-4'/>mohithkumar808@gmail.com</div>
+    <div className='group-hover:text-pri-gray text-sm  md:text-base text-pri-black flex gap-2 justify-center'><EnvelopeIcon className='w-4'/>mohithkumar808@gmail.com</div>
 </div></Link>
 </div>
 </div>

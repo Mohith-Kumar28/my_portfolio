@@ -7,7 +7,7 @@ const Skills = () => {
 <span className='text-pri-purple'> /</span>Skills
 </h2>
 <div className='bg-sec-black rounded-3xl p-6'>
-<div className="flex w-full mb-6">
+<div className="flex flex-col gap-4 md:flex-row  w-full mb-6">
    <div className='flex justify-center flex-col mr-6'>
     <span className='flex gap-2'>
     <span className='bg-pri-purple-dark border border-pri-purple/30 rounded-full w-4 h-4'></span>
@@ -18,8 +18,8 @@ const Skills = () => {
     </span>
     </div> <div className="w-full px-6 bg-pri-purple-dark border border-pri-purple/30 rounded-full text-pri-purple">  C:\Users\Mohith</div>
   </div>
-<div className=' md:flex-row flex flex-col gap-16 justify-between'>
-    <p className='md:w-1/2'>
+<div className=' md:flex-row flex flex-col  overflow-x-auto gap-16 justify-between'>
+    <p className='w-96 md:w-1/2'>
 |||-- Development   <br/> 
 |&nbsp;&nbsp;&nbsp;&nbsp;     |-- Web      <br/> 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         |-- Technical<br/> 
