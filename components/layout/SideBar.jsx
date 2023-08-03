@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Disclosure, Transition } from '@headlessui/react'
-import { XMarkIcon,DocumentTextIcon,ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/solid'
+import { XMarkIcon,DocumentTextIcon,ArrowLeftIcon, ArrowRightIcon,ChevronRightIcon,ChevronLeftIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
@@ -69,7 +69,7 @@ export default function SideBar() {
                   
                   <div className="flex  h-full flex-col  bg-pri-purple-dark py-6 pt-0 px-4 shadow-xl ">
                     <div className='justify-between flex-grow flex flex-col'>
-                    <div className="px-4 sm:px-6 flex flex-col h-2/5">
+                    <div className="px-4 sm:px-6 flex flex-col h-64">
                   <div className='w-[2px] rounded-full flex-grow flex bg-white'></div>
                   <div className='w-9 flex flex-col gap-2 -ml-4 mt-3'>
                   <Link target='_blank' className='hover:bg-pri-purple rounded-lg   my-auto ml-auto' href={'https://bit.ly/3Ylzsw7'}>
@@ -81,6 +81,17 @@ export default function SideBar() {
                   <Link target='_blank' className='hover:bg-pri-purple rounded-lg my-auto ml-auto ' href={'mailto:mohithkumar808@gmail.com'}>
     <Image className='opacity-80'  alt='icon' width={1000} height={1000} src={'/assets/icons/outline/email.png'}/>
     </Link>
+
+
+    <div onClick={()=>setOpen(!open)} className='md:hidden justify-center mt-6 flex cursor-pointer relative'>
+  {open?(
+    //  <ChevronLeftIcon  className='w-12  rounded-full bg-white text-pri-black p-1'/>
+    <button className='h-11 w-11  aspect-square rounded-full text-4xl bg-white text-pri-black font-extrabold '><span className='absolute top-0 left-2'> &lt;</span></button>
+  ):(
+  // <ArrowRightIcon className='w-12 rounded-full bg-white text-pri-black p-1'/>
+  <button className='h-11 w-11  aspect-square rounded-full text-4xl bg-white text-pri-black font-extrabold '><span className='absolute top-0 left-2'> &gt;</span></button>
+  )}
+</div>
                   </div>
                     </div>
                    <div className={`${open?'':'hidden'} md:flex text-xl mt-6 flex flex-col gap-y-6 px-4 sm:px-6`}>
@@ -94,12 +105,7 @@ export default function SideBar() {
                    <Link target='_blank' href={'/assets/resume.pdf'} className={`${open?'w-full':'hidden'} md:block md:w-full `}>                  <div className='border-pri-purple text-center  border-2 mx-3 mt-5 py-2 hover:bg-white hover:text-pri-purple font-bold flex justify-center gap-2  shadow-lg shadow-pri-purple/30' ><DocumentTextIcon className='w-4'/> RESUME</div>
                     </Link>
 
-<div onClick={()=>setOpen(!open)} className='md:hidden justify-center mt-6 flex cursor-pointer'>
-  {open?(
-     <ArrowLeftIcon className='w-12 rounded-full bg-white text-pri-black p-1'/>
-  ):(
-  <ArrowRightIcon className='w-12 rounded-full bg-white text-pri-black p-1'/>)}
-</div>
+
                   </div>
                 </div>
               {/* </Transition.Child> */}
