@@ -7,22 +7,25 @@ const FeaturedCard = ({project}) => {
   return (
 
 <div className=" md:w-full mx-auto  h-fit  rounded-xl  bg-gray-950 overflow-hidden border border-gray-800">
-  <div className="flex w-full ">
-   <div className='flex justify-center flex-col mx-6'>
+  <div className="md:flex-row flex flex-col w-full ">
+   <div className='flex justify-center flex-col mx-6 mt-3 md:mt-0'>
     <span className='flex gap-2'>
     <span className='bg-gray-800 rounded-full w-4 h-4'></span>
     <span className='bg-gray-800 rounded-full w-4 h-4'></span>
     <span className='bg-gray-800 rounded-full w-4 h-4'></span>
     </span>
     </div>
-    <Link target='__blank' className='bg-gray-900 hover:outline text-pri-purple rounded-lg px-4 m-3 py-2 w-full' href={project.live_link}> <div className=" justify-between flex">{project.live_link}
-   {project.live_icon&& <Image className=' w-6' alt='icon' width={100} height={100} src={project.live_icon}/>}
+    <div className='flex w-full'>
+    <Link target='__blank' className='bg-gray-900 hover:outline text-pri-purple rounded-lg   px-4 m-3 py-2 md:w-full flex-grow' href={project.live_link}> <div className=" justify-between gap-x-3 flex">
+      <span className='w-20 truncate md:w-full'>{project.live_link}</span>
+   {project.live_icon&& <span className=' w-6'> <Image  alt='icon' width={100} height={100} src={project.live_icon}/></span>}
     </div></Link>
     {project.github_link&&
-    <Link className=' w-12 my-auto mr-3' href={project.github_link}>
+    <Link className='w-8 md:w-12 my-auto mr-3' href={project.github_link}>
     <Image className=' ' alt='icon' width={100} height={100} src={'/assets/icons/githubIcon.svg'}/>
     </Link>
 }
+</div>
   </div>
 
 

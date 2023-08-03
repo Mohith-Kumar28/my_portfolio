@@ -7,7 +7,7 @@ const Structure = ({children}) => {
       <div className=" ">
     <SideBar/>
     </div>
-    <div className='flex-grow bg-pri-black'>    {children}
+    <div className='flex-grow bg-pri-black overflow-y-auto h-screen'>    {children}
     </div>
 
    </div>
