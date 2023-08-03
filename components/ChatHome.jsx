@@ -20,6 +20,7 @@ const ChatHome = () => {
 
   // Load message count and last message time from local storage on component mount
   useEffect(() => {
+  
     const storedMessageCount = localStorage.getItem('messageCount');
     const storedLastMessageTime = localStorage.getItem('lastMessageTime');
     if (storedMessageCount) {
