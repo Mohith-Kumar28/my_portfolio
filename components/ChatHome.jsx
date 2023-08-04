@@ -4,6 +4,7 @@ import axios from 'axios';
 import ChatList from './ChatList';
 
 import ReCAPTCHA from 'react-google-recaptcha';
+import Loading from './anim/Loading';
 
 
 
@@ -15,6 +16,27 @@ const ChatHome = () => {
   const [lastMessageTime, setLastMessageTime] = useState(0);
 
   const recaptchaRef = useRef(null);
+
+
+  const [loadingText, setLoadingText] = useState("Loading.......")
+
+
+
+//   useEffect(() => {
+//     const prevTxt=loadingText
+//   const interval=setInterval(() => {
+// // if(loadingText.length>=10){
+// //   console.log('hi')
+// //   setLoadingText('Loading')
+// // }else{
+//   console.log(loadingText)
+//       setLoadingText(loadingText+'..//') 
+      
+// // } 
+
+// }, 1000);
+// return ()=>{clearInterval(interval)}
+//   }, [])
 
 
 
@@ -121,6 +143,7 @@ setLoading(false)
 
   const sampleQuestion=[
     'Can you tell me about yourself?',
+    "Give your projects list.",
     'Can you walk me through your problem-solving process?',
    'Describe a project you worked on that you are particularly proud of.',
    'How do you approach collaboration and working in a team environment?',
@@ -154,7 +177,7 @@ These questions are just for reference, feel free to ask any custom question!
 </div>
 
 <div className='p-6 text-pri-gray grid grid-cols-1 sm:grid-cols-2 gap-1'>
-  {sampleQuestion.map((que)=>( <div key={que} className=''># {que}</div>
+  {sampleQuestion.map((que)=>( <div className='cursor-pointer hover:text-pri-white hover:font-bold' onClick={()=>{!loading&&setUserInput(que)}} key={que} ># {que}</div>
   ))}
   
 </div>
@@ -175,7 +198,7 @@ These questions are just for reference, feel free to ask any custom question!
     <BackspaceIcon  className=' w-8   '/>
   </div>}
   <form className='w-full' onSubmit={(e)=>{handleSubmit(e)}} action="">
-<input disabled={loading} value={userInput} onChange={(e) => setUserInput(e.target.value)} type="text" placeholder={loading?'loading...':'Start typing...'} className={` ${chatHistory[0]?'bg-transparent border border-pri-white text-pri-white placeholder:text-pri-white ':'bg-white text-pri-black placeholder:text-pri-black'} pr-16   w-full   py-3 flex-grow px-5  placeholder:font-bold`} />
+<input disabled={loading} value={userInput} onChange={(e) => setUserInput(e.target.value)} type="text" placeholder={loading?loadingText:'Start typing...'} className={` ${chatHistory[0]?'bg-transparent border border-pri-white text-pri-white placeholder:text-pri-white ':'bg-white text-pri-black placeholder:text-pri-black'} pr-16   w-full   py-3 flex-grow px-5 font-bold text-pri-black placeholder:font-bold`} />
 <button className={`${chatHistory[0]?'text-pri-white':'text-pri-black'} rounded-full hover:bg-gray-300 hover:text-pri-black p-2  cursor-pointer  absolute z-10 top-1 right-2`} type='submit'>
 <PaperAirplaneIcon className='w-6 ' />
 </button>
