@@ -144,7 +144,8 @@ setLoading(false)
 
   const sampleQuestion=[
     'Can you tell me about yourself?',
-    "what projects have u worked on",
+    "What projects have u worked on?",
+    "Give your contact details.",
     'Describe a project you worked on that you are particularly proud of.',
     'Can you walk me through your problem-solving process?',
    'How do you approach collaboration and working in a team environment?',
