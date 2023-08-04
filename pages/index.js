@@ -5,16 +5,22 @@ import ChatHome from '@/components/ChatHome'
 
 import Structure from '@/components/layout/Structure'
 
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
+ <>
+
  
-    <Structure>
+     <Structure>
       
-    <ChatHome/>
+     <ChatHome/>
+    
 
     </Structure>
-
+    </>
   )
 }

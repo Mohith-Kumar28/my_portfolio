@@ -26,3 +26,57 @@ body {
     rgb(var(--background-start-rgb));
     font-family: 'Fira Code', monospace;
 }
+
+
+
+
+
+
+
+
+
+
+/* 
+ svg .svg-elem-1 {
+  stroke-dashoffset: 2764.208984375px;
+  stroke-dasharray: 2764.208984375px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+}
+
+svg.active .svg-elem-1 {
+  stroke-dashoffset: 0;
+}
+
+svg .svg-elem-2 {
+  stroke-dashoffset: 172.14791870117188px;
+  stroke-dasharray: 172.14791870117188px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
+}
+
+svg.active .svg-elem-2 {
+  stroke-dashoffset: 0;
+}
+
+svg .svg-elem-3 {
+  stroke-dashoffset: 7.343615531921387px;
+  stroke-dasharray: 7.343615531921387px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
+}
+
+svg.active .svg-elem-3 {
+  stroke-dashoffset: 0;
+}
+
+svg .svg-elem-4 {
+  stroke-dashoffset: 7.680724620819092px;
+  stroke-dasharray: 7.680724620819092px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s;
+}
+
+svg.active .svg-elem-4 {
+  stroke-dashoffset: 0;
+} */
