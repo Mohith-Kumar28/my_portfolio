@@ -16,6 +16,7 @@ const ChatHome = () => {
   const [lastMessageTime, setLastMessageTime] = useState(0);
 
   const recaptchaRef = useRef(null);
+  
 
 
   const [loadingText, setLoadingText] = useState("Loading.......")
@@ -144,8 +145,8 @@ setLoading(false)
   const sampleQuestion=[
     'Can you tell me about yourself?',
     "Give your projects list.",
+    'Describe a project you worked on that you are particularly proud of.',
     'Can you walk me through your problem-solving process?',
-   'Describe a project you worked on that you are particularly proud of.',
    'How do you approach collaboration and working in a team environment?',
    'What are your strengths and weaknesses as a professional?',
    'How do you stay updated with the latest industry trends and technologies?',
@@ -176,7 +177,7 @@ Hi i am<span className='text-pri-purple shadow-2xl shadow-pri-purple/50'> Mohith
 These questions are just for reference, feel free to ask any custom question!
 </div>
 
-<div className='p-6 text-pri-gray grid grid-cols-1 sm:grid-cols-2 gap-1'>
+<div className='p-6 text-pri-gray grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-6'>
   {sampleQuestion.map((que)=>( <div className='cursor-pointer hover:text-pri-white hover:font-bold' onClick={()=>{!loading&&setUserInput(que)}} key={que} ># {que}</div>
   ))}
   

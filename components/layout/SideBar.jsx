@@ -27,7 +27,7 @@ export default function SideBar() {
         isActive:false
     },
     {
-        name:'CONTACTS',
+        name:'CONTACT',
         href:'/about#contact',
         isActive:false
     },
