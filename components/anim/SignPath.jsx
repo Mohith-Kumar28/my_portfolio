@@ -5,7 +5,7 @@ const SignPath = () => {
   return (
     <>
     <div className='bg-pri-purple-dark h-screen overflow-hidden flex justify-center '>
-        <motion.div initial={{opacity:0,scale:0.3}} whileInView={{opacity:0.1,scale:1}} transition={{duration:1.5}} className='md:w-[40%] w-[90%]  border-pri-white rounded-xl flex  justify-center  p-4 -rotate-12'>
+        <motion.div initial={{opacity:0,scale:0.3}} whileInView={{opacity:0.5,scale:1}} transition={{duration:1.5}} className='md:w-[40%] w-[90%]  border-pri-white rounded-xl flex  justify-center  p-4 -rotate-12'>
 <svg className='w-full '  viewBox="0 0 527 429" fill="none" xmlns="http://www.w3.org/2000/svg">
 <motion.path
           initial={{ pathLength: 0, pathOffset: 0 }}
