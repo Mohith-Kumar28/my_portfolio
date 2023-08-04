@@ -23,9 +23,9 @@ const ChatList = ({chatHistory}) => {
             key={index}
             className={`p-5  ${index%2==0&&'bg-sec-black'}`}
           >
-            <p className='font-bold pb-4'>
+            <p className='font-bold pb-4 text-lg'>
           <span className='text-pri-purple font-bold'>/</span>{chat.question}<span className='text-pri-purple'>/</span></p>
-          <span>
+          <span className='text-pri-gray'>
            {TextFormat(chat.answer)}
            </span>
           </div>
