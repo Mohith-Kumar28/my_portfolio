@@ -29,7 +29,7 @@ const FunFacts = () => {
   </div>
     
     </div>
-<div className=' mx-auto w-2/3 mb-10 md:w-1/4 md:-mt-16'>
+<div className=' mr-auto w-2/3 mb-10 md:w-1/4 md:-mt-16'>
     <Image className='' alt='profilepic' width={1000} height={1000} src={'/assets/about/funFactsPic.png'}/>
     </div>
 </div>

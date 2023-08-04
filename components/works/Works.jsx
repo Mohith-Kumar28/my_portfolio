@@ -5,7 +5,7 @@ import MiniProjectCard from './MiniProjectCard'
 const Works = () => {
     const projects=[
         {
-            img:'/assets/works/foozy_app.png',
+            img:'/assets/works/1.png',
             name:'Foozy',
             description:'Foozy is an innovative food pre-ordering platform that empowers local shops to easily register and manage online food orders and payments through its user-friendly interface. With Foozy, customers can conveniently place their orders in advance, providing a seamless and efficient food ordering experience for both shop owners and hungry customers.',
             live_link:'https://bit.ly/3D2AYsS',
@@ -14,7 +14,7 @@ const Works = () => {
             live_icon:'/assets/icons/playStoreIcon.svg'
         },
         {
-            img:'/assets/works/foozy_app.png',
+            img:'/assets/works/2.png',
             name:'Foozy UI/UX',
             description:"Foozy's Figma UI/UX design boasts a clean, modern interface, prioritizing user-friendliness and visual appeal. With intuitive wireframes and smooth user flows, it optimizes the food pre-ordering process, ensuring a seamless journey from selection to secure payment.",
             live_link:'https://bit.ly/3JSF9eS',
@@ -23,7 +23,7 @@ const Works = () => {
             live_icon:'/assets/icons/figmaIcon.png'
         },
         {
-            img:'/assets/works/foozy_app.png',
+            img:'/assets/works/3.png',
             name:'WhatTo website',
             description:"Confused about what to watch on Youtube? Never get bored again, as you can watch any one from top videos recomended by others or share your favourite YouTube videos.",
             live_link:'https://bit.ly/3q8fojV',
@@ -35,18 +35,9 @@ const Works = () => {
     const miniProjects=[
         {
             img:'',
-            name:'Globe Quest',
-            description:'',
-            live_link:'https://bit.ly/43U9DEz',
-            github_link:'https://github.com/Mohith-Kumar28/mapup_assignment',
-            skills:["NextJS","TailwindCSS","Google Maps","Redux"],
-            live_icon:''
-        },
-        {
-            img:'',
             name:'Portfolio website',
             description:'',
-            live_link:'',
+            live_link:'https://www.mohith.in/',
             github_link:'https://github.com/Mohith-Kumar28/my_portfolio',
             skills:["NextJS","TailwindCSS","Lamma-2","OpenAI"],
             live_icon:''
@@ -58,6 +49,15 @@ const Works = () => {
             live_link:'https://bit.ly/3OF24Nz',
             github_link:'',
             skills:['Figma','User Interface','User Experience'],
+            live_icon:''
+        },
+        {
+            img:'',
+            name:'Globe Quest',
+            description:'',
+            live_link:'https://bit.ly/43U9DEz',
+            github_link:'https://github.com/Mohith-Kumar28/mapup_assignment',
+            skills:["NextJS","TailwindCSS","Google Maps","Redux"],
             live_icon:''
         },
         {
