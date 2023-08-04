@@ -4,12 +4,12 @@ import React from 'react'
 const FunFacts = () => {
     const facts=[
         'I like Trakpad than Mouse',
-        'I am an Introvert',
+        // 'I am an Introvert',
         'I like watching youtube with 2x speed',
         'I can speak three languages fluently: English, Hindi, and Telugu',
         'My favourite super hero is Iron Man',
         'I dont have any siblings',
-        'I prefer to work at night',
+        'I am a night owl',
         'I am a die-hard fan of sci-fi movies',
         'I learn everything from youtube',
         'I prefer project based learning',

@@ -31,7 +31,7 @@ const FeaturedCard = ({project}) => {
 
   <div className=' '>
     <div className=' md:flex  '>
-<Image alt='project' className='object-cover w-full md:w-1/3' width={300} height={300} src={project.img}/>
+<Image placeholder='blur' blurDataURL={project.img} alt='project' className='object-cover w-full md:w-1/3' width={800} height={800} src={project.img}/>
 
 {/* <Link className="flex w-full justify-center align-middle bg-pri-purple" href={project.live_link}>
 
