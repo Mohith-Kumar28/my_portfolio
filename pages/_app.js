@@ -29,11 +29,11 @@ return ()=>clearTimeout(timeOut)
   gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`}
 
 </Script>
-{loading?(
+{/* {loading?(
   <SignPath/>
-):(
+):( */}
    <Component {...pageProps} />
-   )}
+   {/* )} */}
    </>)
   
 }

@@ -4,6 +4,7 @@ import { XMarkIcon,DocumentTextIcon,ArrowLeftIcon, ArrowRightIcon,ChevronRightIc
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import SignPath from '../anim/SignPath'
 
 export default function SideBar() {
   const [open, setOpen] = useState(false)
@@ -69,8 +70,13 @@ export default function SideBar() {
                   
                   <div className="flex  h-full flex-col  bg-pri-purple-dark py-6 pt-0 px-4 shadow-xl ">
                     <div className='justify-between flex-grow flex flex-col'>
-                    <div className="px-4 sm:px-6 flex flex-col h-64">
-                  <div className='w-[2px] rounded-full flex-grow flex bg-white'></div>
+                    <div className="px-4 sm:px-6 flex flex-col h-32">
+                      <div className="flex h-full">
+                  <div className='w-[2px]  rounded-full  flex bg-white'></div>
+                  <div className='hidden opacity-30 md:block pl-4 pr-4 py-4  '>
+                  <SignPath strokeWidth={20}/>
+                  </div>
+                  </div>
                   <div className='w-9 flex flex-col gap-2 -ml-4 mt-3'>
                   <Link target='_blank' className='hover:bg-pri-purple rounded-lg   my-auto ml-auto' href={'https://bit.ly/3Ylzsw7'}>
     <Image  alt='icon' width={1000} height={1000} src={'/assets/icons/outline/github.png'}/>
