@@ -146,6 +146,7 @@ setLoading(false)
     'Can you tell me about yourself?',
     "What projects have u worked on?",
     "Give your contact details.",
+    "How is this chat bot working?",
     'Describe a project you worked on that you are particularly proud of.',
     'Can you walk me through your problem-solving process?',
    'How do you approach collaboration and working in a team environment?',
