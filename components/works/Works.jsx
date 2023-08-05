@@ -14,6 +14,15 @@ const Works = () => {
             live_icon:'/assets/icons/playStoreIcon.svg'
         },
         {
+            img:'/assets/works/3.png',
+            name:'Portfolio website',
+            description:"My portfolio website features a unique AI assistant trained with my data. Visitors can ask the AI assistant anything about me and receive informative answers. Powered by advanced technologies like langchain, llama-index, and OpenAI API, the AI assistant understands natural language queries and provides engaging responses. It is a personalized and interactive way for visitors to explore my work and learn more about my expertise as a UI/UX designer.",
+            live_link:'https://www.mohith.in/',
+            github_link:'https://github.com/Mohith-Kumar28/my_portfolio',
+            skills:["NextJS","TailwindCSS","Lamma-2","LangChain","OpenAI"],
+            live_icon:''
+        },
+        {
             img:'/assets/works/2.png',
             name:'Foozy UI/UX',
             description:"Foozy's Figma UI/UX design boasts a clean, modern interface, prioritizing user-friendliness and visual appeal. With intuitive wireframes and smooth user flows, it optimizes the food pre-ordering process, ensuring a seamless journey from selection to secure payment.",
@@ -22,6 +31,10 @@ const Works = () => {
             skills:['Figma','User Interface','User Experience'],
             live_icon:'/assets/icons/figmaIcon.png'
         },
+    
+    ]
+    const miniProjects=[
+       
         {
             img:'/assets/works/3.png',
             name:'WhatTo website',
@@ -30,17 +43,6 @@ const Works = () => {
             github_link:'https://github.com/Mohith-Kumar28/whatto',
             skills:['Django','Web Development'],
             live_icon:'/assets/icons/webIcon.png'
-        },
-    ]
-    const miniProjects=[
-        {
-            img:'',
-            name:'Portfolio website',
-            description:'',
-            live_link:'https://www.mohith.in/',
-            github_link:'https://github.com/Mohith-Kumar28/my_portfolio',
-            skills:["NextJS","TailwindCSS","Lamma-2","OpenAI"],
-            live_icon:''
         },
         {
             img:'',
