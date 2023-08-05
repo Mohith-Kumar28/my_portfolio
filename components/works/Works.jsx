@@ -38,7 +38,7 @@ const Works = () => {
         {
             img:'/assets/works/3.png',
             name:'WhatTo website',
-            description:"Confused about what to watch on Youtube? Never get bored again, as you can watch any one from top videos recomended by others or share your favourite YouTube videos.",
+            description:"",
             live_link:'https://bit.ly/3q8fojV',
             github_link:'https://github.com/Mohith-Kumar28/whatto',
             skills:['Django','Web Development'],
