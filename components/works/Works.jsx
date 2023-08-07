@@ -10,7 +10,8 @@ const Works = () => {
             description:'Foozy is an innovative food pre-ordering platform that empowers local shops to easily register and manage online food orders and payments through its user-friendly interface. With Foozy, customers can conveniently place their orders in advance, providing a seamless and efficient food ordering experience for both shop owners and hungry customers.',
             live_link:'https://bit.ly/3D2AYsS',
             github_link:'',
-            skills:['NextJS','TailwindCSS','ExpressJS','MongoDB',"Redux"],
+            presentation_link:'https://bit.ly/3NLoNWo',
+            skills:['NextJS','TailwindCSS','ExpressJS','MongoDB',"Redux","Google OAuth","Firebase OTP","Push notification"],
             live_icon:'/assets/icons/playStoreIcon.svg'
         },
         {
@@ -31,19 +32,20 @@ const Works = () => {
             skills:['Figma','User Interface','User Experience'],
             live_icon:'/assets/icons/figmaIcon.png'
         },
+        
+        {
+            img:'/assets/works/4.png',
+            name:'WhatTo website',
+            description:"My debut real-world website developed during my web development journey. Never feel bored again as you explore an array of top recommended videos or share your personal favorites on YouTube. With Django and authentication, this project marks my first step into the world of web development, and I'm excited to continue honing my skills.",
+            live_link:'https://bit.ly/3q8fojV',
+            github_link:'https://github.com/Mohith-Kumar28/whatto',
+            skills:['Django','Web Development','Python'],
+            live_icon:'/assets/icons/webIcon.png'
+        },
     
     ]
     const miniProjects=[
        
-        {
-            img:'/assets/works/3.png',
-            name:'WhatTo website',
-            description:"",
-            live_link:'https://bit.ly/3q8fojV',
-            github_link:'https://github.com/Mohith-Kumar28/whatto',
-            skills:['Django','Web Development'],
-            live_icon:'/assets/icons/webIcon.png'
-        },
         {
             img:'',
             name:'Portfolio UI/UX',

@@ -20,8 +20,13 @@ const FeaturedCard = ({project}) => {
       <span className='w-20 truncate md:w-full'>{project.live_link}</span>
    {project.live_icon&& <span className=' w-6'> <Image  alt='icon' width={100} height={100} src={project.live_icon}/></span>}
     </div></Link>
+    {project.presentation_link&&
+    <Link target='_blank' className='w-8 md:w-10 my-auto mr-3' href={project.presentation_link}>
+    <Image className=' ' alt='icon' width={100} height={100} src={'/assets/icons/pptIcon.png'}/>
+    </Link>
+}
     {project.github_link&&
-    <Link className='w-8 md:w-12 my-auto mr-3' href={project.github_link}>
+    <Link target='_blank' className='w-8 md:w-12 my-auto mr-3' href={project.github_link}>
     <Image className=' ' alt='icon' width={100} height={100} src={'/assets/icons/githubIcon.svg'}/>
     </Link>
 }
