@@ -19,7 +19,7 @@ const Intro = () => {
     </div>
 </div>
     </div>
-  )
+  ) 
 }
 
 export default Intro
