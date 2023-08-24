@@ -65,7 +65,7 @@ export default function SideBar() {
                 leaveFrom="translate-y-0"
                 leaveTo="translate-y-full"
               > */}
-                <div className={`pointer-events-auto   h-full   ${open?'w-48 absolute z-50':'w-16 '} md:relative md:w-48 `}>
+                <div className={`pointer-events-auto   h-full   ${open?'w-48 absolute z-50':'w-16 '} md:relative md:w-[200px] `}>
                   
                   
                   <div className="flex  h-full flex-col  bg-pri-purple-dark py-6 pt-0 px-4 shadow-xl ">
