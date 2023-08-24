@@ -173,6 +173,31 @@ setLoading(false)
 <h1 className='font-bold text-3xl '>
 Hi i am<span className='text-pri-purple shadow-2xl shadow-pri-purple/50'> Mohith</span>, Ask my<br/> my  <span className='text-pri-purple'>AI assistant </span> about me
 </h1>
+</>)}
+
+
+
+<div className={`${chatHistory[0]?'bg-pri-black w-full p-5 absolute left-0 bottom-0 px-5':'my-9'}`}>
+
+<div className={`flex   relative `}>
+ {chatHistory[0]&& <div onClick={()=>{clearStates()}} title='Clear Chat' className='border hover:bg-pri-white p-2 bg-pri-black text-pri-white hover:text-pri-black border-pri-white cursor-pointer'>
+    <BackspaceIcon  className=' w-8   '/>
+  </div>}
+  <form className='w-full' onSubmit={(e)=>{handleSubmit(e)}} action="">
+<input disabled={loading} value={userInput} onChange={(e) => setUserInput(e.target.value)} type="text" placeholder={loading?loadingText:'Start typing...'} className={` ${chatHistory[0]?'bg-transparent border border-pri-white text-pri-white placeholder:text-pri-white ':'bg-white text-pri-black placeholder:text-pri-black'} pr-16   w-full   py-3 flex-grow px-5 font-bold text-pri-black placeholder:font-bold`} />
+<button className={`${chatHistory[0]?'text-pri-white':'text-pri-black'} rounded-full hover:bg-gray-300 hover:text-pri-black p-2  cursor-pointer  absolute z-10 top-1 right-2`} type='submit'>
+<PaperAirplaneIcon className='w-6 ' />
+</button>
+  {/* Add reCAPTCHA v3 here */}
+  <div className='hidden'>
+  <ReCAPTCHA   ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY} size="invisible" />
+  </div>
+</form>
+</div>
+</div>
+
+
+ {chatHistory.length==0&&(<>
 
 <div className='border border-pri-gray my-6'>
   <div className='border  border-pri-gray p-2 font-b
@@ -195,24 +220,6 @@ These questions are just for reference, feel free to ask any custom question!
 
 
 
-<div className={`${chatHistory[0]?'bg-pri-black w-full p-5 absolute left-0 bottom-0 px-5':''}`}>
-
-<div className={`flex   relative `}>
- {chatHistory[0]&& <div onClick={()=>{clearStates()}} title='Clear Chat' className='border hover:bg-pri-white p-2 bg-pri-black text-pri-white hover:text-pri-black border-pri-white cursor-pointer'>
-    <BackspaceIcon  className=' w-8   '/>
-  </div>}
-  <form className='w-full' onSubmit={(e)=>{handleSubmit(e)}} action="">
-<input disabled={loading} value={userInput} onChange={(e) => setUserInput(e.target.value)} type="text" placeholder={loading?loadingText:'Start typing...'} className={` ${chatHistory[0]?'bg-transparent border border-pri-white text-pri-white placeholder:text-pri-white ':'bg-white text-pri-black placeholder:text-pri-black'} pr-16   w-full   py-3 flex-grow px-5 font-bold text-pri-black placeholder:font-bold`} />
-<button className={`${chatHistory[0]?'text-pri-white':'text-pri-black'} rounded-full hover:bg-gray-300 hover:text-pri-black p-2  cursor-pointer  absolute z-10 top-1 right-2`} type='submit'>
-<PaperAirplaneIcon className='w-6 ' />
-</button>
-  {/* Add reCAPTCHA v3 here */}
-  <div className='hidden'>
-  <ReCAPTCHA   ref={recaptchaRef} sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY} size="invisible" />
-  </div>
-</form>
-</div>
-</div>
 
 
 </div>
