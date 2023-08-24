@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { PaperAirplaneIcon,BackspaceIcon } from '@heroicons/react/24/outline'
+import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
+import { BackspaceIcon } from '@heroicons/react/24/solid'
 import axios from 'axios';
 import ChatList from './ChatList';
 
@@ -16,7 +17,7 @@ const ChatHome = () => {
   const [lastMessageTime, setLastMessageTime] = useState(0);
 
   const recaptchaRef = useRef(null);
-  
+  const inputReference = useRef(null);
 
 
   const [loadingText, setLoadingText] = useState("Loading.......")
@@ -43,6 +44,7 @@ const ChatHome = () => {
 
   // Load message count and last message time from local storage on component mount
   useEffect(() => {
+    inputReference.current.focus();
   
     const storedMessageCount = localStorage.getItem('messageCount');
     const storedLastMessageTime = localStorage.getItem('lastMessageTime');
@@ -69,6 +71,7 @@ const ChatHome = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
 
     // recaptch verification
     const recaptchaResponse = await recaptchaRef.current.executeAsync();
@@ -180,13 +183,13 @@ Hi i am<span className='text-pri-purple shadow-2xl shadow-pri-purple/50'> Mohith
 <div className={`${chatHistory[0]?'bg-pri-black w-full p-5 absolute left-0 bottom-0 px-5':'my-9'}`}>
 
 <div className={`flex   relative `}>
- {chatHistory[0]&& <div onClick={()=>{clearStates()}} title='Clear Chat' className='border hover:bg-pri-white p-2 bg-pri-black text-pri-white hover:text-pri-black border-pri-white cursor-pointer'>
-    <BackspaceIcon  className=' w-8   '/>
+ {chatHistory[0]&& <div onClick={()=>{clearStates()}} title='Clear Chat' className='border  bg-pri-white p-2 hover:bg-pri-black hover:text-pri-white text-pri-black border-pri-white cursor-pointer'>
+    <BackspaceIcon  className=' w-10   '/>
   </div>}
   <form className='w-full' onSubmit={(e)=>{handleSubmit(e)}} action="">
-<input disabled={loading} value={userInput} onChange={(e) => setUserInput(e.target.value)} type="text" placeholder={loading?loadingText:'Start typing...'} className={` ${chatHistory[0]?'bg-transparent border border-pri-white text-pri-white placeholder:text-pri-white ':'bg-white text-pri-black placeholder:text-pri-black'} pr-16   w-full   py-3 flex-grow px-5 font-bold text-pri-black placeholder:font-bold`} />
+<input ref={inputReference} disabled={loading} value={userInput} onChange={(e) => setUserInput(e.target.value)} type="text" placeholder={loading?loadingText:'Start asking about me...'} className={` ${chatHistory[0]?'bg-transparent border border-pri-white text-pri-white placeholder:text-pri-white ':'bg-white text-pri-black placeholder:text-pri-black focus:py-3 focus:border-4 focus:border-pri-purple'} pr-16   w-full   py-4 flex-grow px-5 font-bold text-pri-black placeholder:font-bold`} />
 <button className={`${chatHistory[0]?'text-pri-white':'text-pri-black'} rounded-full hover:bg-gray-300 hover:text-pri-black p-2  cursor-pointer  absolute z-10 top-1 right-2`} type='submit'>
-<PaperAirplaneIcon className='w-6 ' />
+<PaperAirplaneIcon className='w-8 ' />
 </button>
   {/* Add reCAPTCHA v3 here */}
   <div className='hidden'>
@@ -206,7 +209,7 @@ These questions are just for reference, feel free to ask any custom question!
 </div>
 
 <div className='p-6 text-pri-gray grid grid-cols-1 sm:grid-cols-2 gap-y-1 gap-x-6'>
-  {sampleQuestion.map((que)=>( <div className='cursor-pointer hover:text-pri-white hover:font-bold' onClick={()=>{!loading&&setUserInput(que)}} key={que} ># {que}</div>
+  {sampleQuestion.map((que)=>( <div className='cursor-pointer hover:text-pri-white hover:font-bold' onClick={()=>{!loading&&(setUserInput(que), inputReference.current.focus())}} key={que} ># {que}</div>
   ))}
   
 </div>
