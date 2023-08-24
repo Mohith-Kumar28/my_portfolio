@@ -6,7 +6,7 @@ import Link from 'next/link'
 const FeaturedCard = ({project}) => {
   return (
 
-<div className=" md:w-full mx-auto  h-fit  rounded-xl  bg-gray-950 overflow-hidden border border-gray-800">
+<div className=" md:w-full mx-auto text-pri-white  h-fit  rounded-xl  bg-gray-950 overflow-hidden border border-gray-800">
   <div className="md:flex-row flex flex-col w-full ">
    <div className='flex justify-center flex-col mx-6 mt-3 md:mt-0'>
     <span className='flex gap-2'>

@@ -166,15 +166,16 @@ setLoading(false)
 
 
   return (
-    <div className={` relative   flex flex-col w-full min-h-screen   ${chatHistory[0]?'justify-end ':'justify-center   p-6 align-middle'} `}
+    <div className={`text-pri-white relative   flex flex-col w-full min-h-screen   ${chatHistory[0]?'justify-end ':'justify-center   p-6 align-middle'} `}
     >
 <div className='w-full  mx-auto'>
       {chatHistory.length==0&&(<>
-<h1 className='font-bold text-3xl'>
+<h1 className='font-bold text-3xl '>
 Hi i am<span className='text-pri-purple shadow-2xl shadow-pri-purple/50'> Mohith</span>, Ask my<br/> my  <span className='text-pri-purple'>AI assistant </span> about me
 </h1>
+
 <div className='border border-pri-gray my-6'>
-  <div className='border border-pri-gray p-2 font-b
+  <div className='border  border-pri-gray p-2 font-b
   '>
 These questions are just for reference, feel free to ask any custom question!
 </div>
@@ -212,6 +213,8 @@ These questions are just for reference, feel free to ask any custom question!
 </form>
 </div>
 </div>
+
+
 </div>
     </div>
   )

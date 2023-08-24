@@ -141,7 +141,7 @@ const Works = () => {
        
     ]
   return (
-    <div className='h-screen overflow-y-auto p-6 flex flex-col  bg-pri-black '>
+    <div className='h-screen overflow-y-auto p-6 flex flex-col text-pri-white  bg-pri-black '>
       
       <div className='my-6'> <h2 className='font-bold text-2xl'>
 <span className='text-pri-purple'> /</span>Featured Projects

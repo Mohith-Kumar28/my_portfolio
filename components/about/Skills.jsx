@@ -16,7 +16,7 @@ const Skills = () => {
       
     </span>
     </span>
-    </div> <div className="w-full px-6 bg-pri-purple-dark border border-pri-purple/30 rounded-full text-pri-purple">  C:\Users\Mohith</div>
+    </div> <div className="w-full px-6 bg-pri-purple-dark border border-pri-purple/30 rounded-full text-pri-purple">  C:\Users\Mohith\Skills</div>
   </div>
 <div className=' md:flex-row flex flex-col  overflow-x-auto gap-16 justify-between'>
     <p className='w-96 lg:w-1/2'>

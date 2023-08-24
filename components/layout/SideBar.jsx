@@ -108,7 +108,7 @@ export default function SideBar() {
                             </Link>   ))}
                     </div>
                     </div>
-                   <Link target='_blank' href={'/assets/resume.pdf'} className={`${open?'w-full':'hidden'} md:block md:w-full `}>                  <div className='border-pri-purple text-center  border-2 mx-3 mt-5 py-2 hover:bg-white hover:text-pri-purple font-bold flex justify-center gap-2  shadow-lg shadow-pri-purple/30' ><DocumentTextIcon className='w-4'/> RESUME</div>
+                   <Link target='_blank' href={'/assets/resume.pdf'} className={`${open?'w-full':'hidden'} md:block md:w-full `}>                  <div className='border-pri-purple text-center  border-2 mx-3 mt-5 py-2 hover:bg-white hover:text-pri-purple font-bold flex justify-center gap-2 text-pri-white shadow-lg shadow-pri-purple/30' ><DocumentTextIcon className='w-4'/> RESUME</div>
                     </Link>
 
 

@@ -6,7 +6,7 @@ import Contact from './Contact'
 
 const About = () => {
   return (
-    <div className='overflow-y-auto h-screen flex flex-col gap-16'>
+    <div className='overflow-y-auto h-screen flex flex-col gap-16 text-pri-white'>
         <Intro/>
         <Skills/>
         <FunFacts/>
