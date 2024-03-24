@@ -78,7 +78,7 @@ export default function SideBar() {
               <div className="px-4 sm:px-6 flex flex-col h-32">
                 <div className="flex h-full">
                   <div className="w-[2px]  rounded-full  flex bg-white"></div>
-                  <div className="hidden opacity-30 md:block pl-4 pr-4 py-4  ">
+                  <div className="hidden opacity-30 md:block pl-10 pr-1 py-8  ">
                     <SignPath strokeWidth={20} />
                   </div>
                 </div>

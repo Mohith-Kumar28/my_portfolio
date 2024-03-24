@@ -3,7 +3,7 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <div className="p-6 ">
+    <div className="p-6 my-6">
       <h2 className="font-bold text-2xl mb-8">
         <span className="text-pri-purple"> /</span>Intro
       </h2>

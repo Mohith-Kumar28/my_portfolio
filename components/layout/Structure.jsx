@@ -1,17 +1,18 @@
-import React from 'react'
-import SideBar from './SideBar'
+import React from "react";
+import SideBar from "./SideBar";
 
-const Structure = ({children}) => {
+const Structure = ({ children }) => {
   return (
-    <div className='flex h-screen'>
+    <div className="flex h-screen">
       <div className=" ">
-    <SideBar/>
+        <SideBar />
+      </div>
+      <div className="flex-grow bg-pri-black overflow-y-auto h-screen">
+        {" "}
+        {children}
+      </div>
     </div>
-    <div className='flex-grow bg-pri-black overflow-y-auto h-screen'>    {children}
-    </div>
+  );
+};
 
-   </div>
-  )
-}
-
-export default Structure
+export default Structure;
