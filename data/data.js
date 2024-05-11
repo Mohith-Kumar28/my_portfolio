@@ -6,7 +6,7 @@ export const projects = [
       "Foozy is an innovative food pre-ordering platform that empowers local shops to easily register and manage online food orders and payments through its user-friendly interface. With Foozy, customers can conveniently place their orders in advance, providing a seamless and efficient food ordering experience for both shop owners and hungry customers.",
     live_link: "https://bit.ly/4aKGT4Y",
     github_link: "",
-    presentation_link: "https://bit.ly/3NLoNWo",
+    presentation_link: "https://www.canva.com/design/DAGEGToE2vc/iLsf3Tb1r4fyw6Peup7jZw/view?utm_content=DAGEGToE2vc&utm_campaign=designshare&utm_medium=link&utm_source=editor",
     skills: [
       "NextJS",
       "TailwindCSS",
